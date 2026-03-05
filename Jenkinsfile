@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/durga295/Quiz-WebApp.git'
+                git branch: 'main', url: 'https://github.com/durga295/Quiz-WebApp.git'
             }
         }
 
