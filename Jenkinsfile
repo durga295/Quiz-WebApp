@@ -6,7 +6,7 @@ stages {
 
 stage('Clone Repo') {
 steps {
-git 'https://github.com/your-username/quiz-app.git'
+git 'https://github.com/durga295/QuizWeb-App.git'
 }
 }
 
