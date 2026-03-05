@@ -1,33 +1,29 @@
 pipeline {
+    agent any
 
-agent any
+    stages {
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/durga295/QuizWeb-App.git'
+            }
+        }
 
-stages {
+        stage('Build') {
+            steps {
+                echo 'Building Quiz Web App'
+            }
+        }
 
-stage('Clone Repo') {
-steps {
-git 'https://github.com/durga295/QuizWeb-App.git'
-}
-}
+        stage('Test') {
+            steps {
+                echo 'Running Tests'
+            }
+        }
 
-stage('Build') {
-steps {
-echo 'Building Application'
-}
-}
-
-stage('Test') {
-steps {
-echo 'Running Tests'
-}
-}
-
-stage('Deploy') {
-steps {
-echo 'Deploying Application'
-}
-}
-
-}
-
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application'
+            }
+        }
+    }
 }
